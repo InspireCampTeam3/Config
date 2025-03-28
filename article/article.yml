@@ -5,6 +5,9 @@ naver:
 groq:
   api-key: ${GROQ_API_KEY}
 
+openai:
+  api-key: ${OPENAI_API_KEY}
+
 eureka:
   instance:
     prefer-ip-address: true
