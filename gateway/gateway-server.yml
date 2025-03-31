@@ -45,6 +45,12 @@ spring:
           uri: lb://INTEREST
           filters:
             - RewritePath=/interest/(?<segment>.*), /${segment}
+        - id: file
+          predicates:
+            - Path=/file/**
+          uri: lb://FILE
+          filters:
+            - RewritePath=/file/(?<segment>.*), /${segment}
 
 server:
   port: 8072
