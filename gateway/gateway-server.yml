@@ -39,6 +39,12 @@ spring:
           uri: lb://KITCHA-BOARD
           filters:
             - RewritePath=/kitcha-board/(?<segment>.*), /${segment}
+        - id: interest
+          predicates:
+            - Path=/interest/**
+          uri: lb://INTEREST
+          filters:
+            - RewritePath=/interest/(?<segment>.*), /${segment}
 
 server:
   port: 8072
