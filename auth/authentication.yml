@@ -8,6 +8,8 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+  kafka:
+    bootstrap-servers: broker:9092
 
 server:
   port: 8091
